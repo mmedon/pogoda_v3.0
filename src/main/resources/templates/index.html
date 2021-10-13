@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>test</title>
@@ -20,6 +20,9 @@
                             <li><a href="#">Pogoda</a></li>
                             <li><a href="#">Zaloz konto</a></li>
                             <li><a href="#">Zaloguj sie</a></li>
+                            <li><a th:href="@{/weatherApp/current-weather(city='pszczyna',country='pl')}">Pszczyna</a></li>
+                            <li><a th:href="@{/weatherApp/current-weather(city='dublin',country='ie')}">Dublin</a></li>
+                            <li><a th:href="@{/weatherApp/current-weather(city='Nice',country='fr')}">Nice</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Servis</a></li>
