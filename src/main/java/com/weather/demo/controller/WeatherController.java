@@ -12,7 +12,7 @@ public class WeatherController {
 
     @GetMapping()
     public String getHome() {
-        return "Hello from weather api!";
+        return "index";
     }
 
 
