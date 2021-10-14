@@ -19,6 +19,19 @@ public class WeatherController {
     }
 
 
+
+    //doc
+
+    /**
+     * @return index.html view
+     *an Image object that can then be painted on the screen.
+     *The url argument must specify an absolute <a href="#{@link}">{@link}</a>. The name
+     *argument is a specifier that is relative to the url argument.
+     *<p>
+     *
+     * This method always returns immediately, whether or not the
+     * image exists.
+     */
     @GetMapping()
     public String getHome() {
         return "index";
