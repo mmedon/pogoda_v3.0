@@ -29,6 +29,9 @@ public class CurrentWeather implements Serializable {
         return mainWeather;
     }
 
+    /**
+     * @param mainWeather - value to set main weather
+     */
     public void setMainWeather(String mainWeather) {
         this.mainWeather = mainWeather;
     }
