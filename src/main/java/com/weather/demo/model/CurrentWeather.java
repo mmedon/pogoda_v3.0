@@ -21,6 +21,10 @@ public class CurrentWeather implements Serializable {
         this.city = city;
     }
 
+
+    /**
+     * @return mainWeather
+     */
     public String getMainWeather() {
         return mainWeather;
     }
