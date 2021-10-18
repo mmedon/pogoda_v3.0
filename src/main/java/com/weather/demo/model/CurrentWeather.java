@@ -23,12 +23,18 @@ public class CurrentWeather implements Serializable {
         this.city = city;
     }
 
-    public String getMainWeather() {
-        return mainWeather;
-    }
+    public String getMainWeather() { return mainWeather; }
 
     public void setMainWeather(String mainWeather) {
         this.mainWeather = mainWeather;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getCity() {
@@ -62,6 +68,7 @@ public class CurrentWeather implements Serializable {
 
         CurrentWeather that = (CurrentWeather) o;
 
+        if (!Objects.equals(description, that.description)) return false;
         if (!Objects.equals(temperature, that.temperature)) return false;
         return Objects.equals(windSpeed, that.windSpeed);
     }
