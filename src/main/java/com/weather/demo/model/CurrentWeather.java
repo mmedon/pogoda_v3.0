@@ -7,6 +7,7 @@ import java.util.Objects;
 public class CurrentWeather implements Serializable {
 
     private String mainWeather;
+    private String description;
     private BigDecimal temperature;
     private BigDecimal windSpeed;
     private String city;
@@ -14,8 +15,9 @@ public class CurrentWeather implements Serializable {
     public CurrentWeather() {
     }
 
-    public CurrentWeather(String mainWeather, BigDecimal temperature,BigDecimal windSpeed, String city) {
+    public CurrentWeather(String mainWeather, String description, BigDecimal temperature,BigDecimal windSpeed, String city) {
         this.mainWeather = mainWeather;
+        this.description = description;
         this.temperature = temperature;
         this.windSpeed = windSpeed;
         this.city = city;
