@@ -14,6 +14,13 @@ public class CurrentWeather implements Serializable {
     public CurrentWeather() {
     }
 
+    /**
+     *
+     * @param mainWeather
+     * @param temperature
+     * @param windSpeed
+     * @param city
+     */
     public CurrentWeather(String mainWeather, BigDecimal temperature,BigDecimal windSpeed, String city) {
         this.mainWeather = mainWeather;
         this.temperature = temperature;
