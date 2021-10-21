@@ -7,6 +7,7 @@ import java.util.Objects;
 public class CurrentWeather implements Serializable {
 
     private String mainWeather;
+    private String description;
     private BigDecimal temperature;
     private BigDecimal windSpeed;
     private String city;
@@ -16,6 +17,7 @@ public class CurrentWeather implements Serializable {
 
     public CurrentWeather(String mainWeather, BigDecimal temperature,BigDecimal windSpeed, String city) {
         this.mainWeather = mainWeather;
+        this.description = description;
         this.temperature = temperature;
         this.windSpeed = windSpeed;
         this.city = city;
@@ -36,6 +38,10 @@ public class CurrentWeather implements Serializable {
     public void setCity(String city) {
         this.city = city;
     }
+
+    public String getDescription(){ return description; }
+
+    public void setDescription(String description){ this.description = description; }
 
     public BigDecimal getTemperature() {
         return temperature;
@@ -60,6 +66,7 @@ public class CurrentWeather implements Serializable {
 
         CurrentWeather that = (CurrentWeather) o;
 
+        if (description != null ? !description.equals(that.description) : that.description != null) return false;
         if (!Objects.equals(temperature, that.temperature)) return false;
         return Objects.equals(windSpeed, that.windSpeed);
     }
@@ -68,6 +75,7 @@ public class CurrentWeather implements Serializable {
     public int hashCode() {
         int result = temperature != null ? temperature.hashCode() : 0;
         result = 31 * result + (windSpeed != null ? windSpeed.hashCode() : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
 }
