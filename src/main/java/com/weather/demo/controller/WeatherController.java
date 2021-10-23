@@ -46,7 +46,7 @@ public class WeatherController {
             Model model) {
 
         System.out.println("City:" + city);
-        System.out.println("Country" + country);
+        System.out.println("Country: " + country);
 
         model.addAttribute("currentWeather",
                 liveWeatherService.getCurrentWeather(city, country));
