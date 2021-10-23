@@ -37,7 +37,13 @@ public class WeatherController {
         return "index";
     }
 
-
+    /**
+     *
+     * @param city
+     * @param country
+     * @param model
+     * @return
+     */
     // htpp://weatherApp/current-weather
     @GetMapping("/current-weather")
     public String getCurrentWeather(
