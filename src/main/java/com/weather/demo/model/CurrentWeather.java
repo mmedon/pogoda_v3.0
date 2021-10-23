@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class CurrentWeather implements Serializable {
 
+    //field
     private String mainWeather;
     private String description;
     private BigDecimal temperature;
