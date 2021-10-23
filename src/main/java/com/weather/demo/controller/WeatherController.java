@@ -45,7 +45,7 @@ public class WeatherController {
             @RequestParam String country,
             Model model) {
 
-        System.out.println("City:" + city);
+        System.out.println("City: " + city);
         System.out.println("Country: " + country);
 
         model.addAttribute("currentWeather",
