@@ -61,5 +61,10 @@ public class WeatherController {
         return "current-weather";
     }
 
+    @GetMapping("/select-weather")
+    public String findWeather(){
+        return "selection-of-weather";
+    }
+
 
 }

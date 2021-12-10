@@ -10,6 +10,7 @@ public class CurrentWeather implements Serializable {
     private String mainWeather;
     private String description;
     private BigDecimal temperature;
+    private BigDecimal feelsLike;
     private BigDecimal windSpeed;
     private String city;
 
@@ -17,16 +18,16 @@ public class CurrentWeather implements Serializable {
     }
 
     /**
-     *
      * @param mainWeather
      * @param temperature
      * @param windSpeed
      * @param city
      */
-    public CurrentWeather(String mainWeather, BigDecimal temperature,BigDecimal windSpeed, String city) {
+    public CurrentWeather(String mainWeather, String description, BigDecimal temperature, BigDecimal feelsLike, BigDecimal windSpeed, String city) {
         this.mainWeather = mainWeather;
         this.description = description;
         this.temperature = temperature;
+        this.feelsLike = feelsLike;
         this.windSpeed = windSpeed;
         this.city = city;
     }
@@ -54,9 +55,13 @@ public class CurrentWeather implements Serializable {
         this.city = city;
     }
 
-    public String getDescription(){ return description; }
+    public String getDescription() {
+        return description;
+    }
 
-    public void setDescription(String description){ this.description = description; }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public BigDecimal getTemperature() {
         return temperature;
@@ -64,6 +69,14 @@ public class CurrentWeather implements Serializable {
 
     public void setTemperature(BigDecimal temperature) {
         this.temperature = temperature;
+    }
+
+    public BigDecimal getFeelsLike() {
+        return feelsLike;
+    }
+
+    public void setFeelsLike(BigDecimal feelsLike) {
+        this.feelsLike = feelsLike;
     }
 
     public BigDecimal getWindSpeed() {
@@ -81,16 +94,18 @@ public class CurrentWeather implements Serializable {
 
         CurrentWeather that = (CurrentWeather) o;
 
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
+        if (!Objects.equals(description, that.description)) return false;
         if (!Objects.equals(temperature, that.temperature)) return false;
+        if (!Objects.equals(feelsLike, that.feelsLike)) return false;
         return Objects.equals(windSpeed, that.windSpeed);
     }
 
     @Override
     public int hashCode() {
-        int result = temperature != null ? temperature.hashCode() : 0;
+        int result = description != null ? description.hashCode() : 0;
+        result = 31 * result + (temperature != null ? temperature.hashCode() : 0);
+        result = 31 * result + (feelsLike != null ? feelsLike.hashCode() : 0);
         result = 31 * result + (windSpeed != null ? windSpeed.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
         return result;
     }
 }
