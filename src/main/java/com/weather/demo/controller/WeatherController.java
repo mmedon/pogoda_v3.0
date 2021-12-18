@@ -49,14 +49,15 @@ public class WeatherController {
     public String getCurrentWeather(
             @RequestParam String city,
             @RequestParam String country,
+            @RequestParam String lang,
             Model model) {
 
         System.out.println("City: " + city);
         System.out.println("Country: " + country);
-        System.out.println("Nowy log");
+        System.out.println("Language: " + lang);
 
         model.addAttribute("currentWeather",
-                liveWeatherService.getCurrentWeather(city, country));
+                liveWeatherService.getCurrentWeather(city, country, lang));
 
         return "current-weather";
     }

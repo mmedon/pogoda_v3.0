@@ -11,18 +11,18 @@
 <body>
 <h3>Hello from Pogoda Api</h3>
 
-<div class="container">
+<div class="container teal lighten-2" lighten-3>
     <nav>
         <div class="nav-wrapper">
-            <a href="/weatherApp/" class="brand-logo"> <i class="large material-icons">wb_sunny</i>Pogoda 2.0</a>
+            <a href="/weatherApp/" class="brand-logo"> <i class="large material-icons">wb_sunny</i>Pogoda 3.0</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a th:href="@{/weatherApp/current-weather(city='pszczyna',country='pl',lang='pl')}">Pszczyna</a></li>
                 <li><a th:href="@{/weatherApp/current-weather(city='katowice',country='pl',lang='pl')}">Katowice</a></li>
                 <li><a th:href="@{/weatherApp/current-weather(city='gliwice',country='pl',lang='pl')}">Gliwice</a></li>
                 <li><a th:href="@{/weatherApp/current-weather(city='krakow',country='pl',lang='pl')}">Krakow</a></li>
-                <li><a th:href="@{/weatherApp/current-weather(city='london',country='en',lang='en')}">London</a></li>
-                <li><a th:href="@{/weatherApp/current-weather(city='dublin',country='ie',lang='ie')}">Dublin</a></li>
-                <li><a th:href="@{/weatherApp/current-weather(city='Nice',country='fr',lang='fr')}">Nice</a></li>
+                <li><a th:href="@{/weatherApp/current-weather(city='london',country='gb',lang='pl')}">London</a></li>
+                <li><a th:href="@{/weatherApp/current-weather(city='dublin',country='ie',lang='pl')}">Dublin</a></li>
+                <li><a th:href="@{/weatherApp/current-weather(city='Nice',country='fr',lang='pl')}">Nice</a></li>
             </ul>
         </div>
     </nav>

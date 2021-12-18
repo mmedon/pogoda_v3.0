@@ -13,16 +13,16 @@
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <div class="container">
     <nav>
-        <div class="nav-wrapper">
-            <a href="/weatherApp/" class="brand-logo"> <i class="large material-icons">wb_sunny</i>Pogoda 2.0</a>
+        <div class="nav-wrapper teal lighten-2">
+            <a href="/weatherApp/" class="brand-logo"> <i class="large material-icons">wb_sunny</i>Pogoda 3.0</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a th:href="@{/weatherApp/current-weather(city='pszczyna',country='pl',lang='pl')}">Pszczyna</a></li>
                 <li><a th:href="@{/weatherApp/current-weather(city='katowice',country='pl',lang='pl')}">Katowice</a></li>
                 <li><a th:href="@{/weatherApp/current-weather(city='gliwice',country='pl',lang='pl')}">Gliwice</a></li>
                 <li><a th:href="@{/weatherApp/current-weather(city='krakow',country='pl',lang='pl')}">Krakow</a></li>
-                <li><a th:href="@{/weatherApp/current-weather(city='london',country='en',lang='en')}">London</a></li>
-                <li><a th:href="@{/weatherApp/current-weather(city='dublin',country='ie',lang='ie')}">Dublin</a></li>
-                <li><a th:href="@{/weatherApp/current-weather(city='Nice',country='fr',lang='fr')}">Nice</a></li>
+                <li><a th:href="@{/weatherApp/current-weather(city='london',country='gb',lang='pl')}">London</a></li>
+                <li><a th:href="@{/weatherApp/current-weather(city='dublin',country='ie',lang='pl')}">Dublin</a></li>
+                <li><a th:href="@{/weatherApp/current-weather(city='Nice',country='fr',lang='pl')}">Nice</a></li>
             </ul>
         </div>
     </nav>
@@ -59,8 +59,10 @@
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    <h5 class="white-text">Aplikacja POGODOWA 3.0</h5>
+                    <p class="grey-text text-lighten-4">Zapoznaj się z naszą</p>
+                    <p class="grey-text text-lighten-4">Aplikacją</p>
+                    <h5 class="grey-text text-lighten-4">Pogodową</h5>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
@@ -79,11 +81,13 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2021 Copyright Text
+                © 2021 Copyright Team_1
                 <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>
     </footer>
+</div>
+</div>
 </div>
 </body>
 </html>
